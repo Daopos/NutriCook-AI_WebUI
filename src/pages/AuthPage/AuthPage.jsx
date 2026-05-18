@@ -1,15 +1,18 @@
 import { useState } from "react";
+import Login from "./Login";
+import Signup from "./Signup";
 
 const AuthPage = () => {
   const [mode, setMode] = useState("login");
   return (
-    <div className="p-7 h-screen grid grid-cols-2 gap-4">
+    <div className="p-[70px] h-screen grid grid-cols-2 gap-4 ">
       <div className="p-7">
         <h1>MISE EN PLACE</h1>
-        <h1 className="mt-2 text-8xl tracking-wider font-bold text-(--primary-dark)">
+        <h1 className="mt-2 text-8xl tracking-wider font-bold text-[var(--primary-dark)]">
           YOUR
           <br />
           DIGITAL
+          
           <br />
           NOURISH.
         </h1>
@@ -21,11 +24,11 @@ const AuthPage = () => {
       </div>
       <div className="p-7">
         <div>
-          <div className="flex items-center gap-2  bg-slate-100 p-3 w-fit">
+          <div className="flex items-center justify-center gap-2 bg-slate-100 p-3">
             <button
               type="button"
               onClick={() => setMode("login")}
-              className={`px-5 w-50 py-2 text-sm font-semibold transition ${
+              className={`px-5 w-full py-2 text-sm font-semibold transition ${
                 mode === "login"
                   ? "bg-white text-emerald-800 shadow"
                   : "text-slate-500 hover:text-slate-900"
@@ -37,7 +40,7 @@ const AuthPage = () => {
             <button
               type="button"
               onClick={() => setMode("signup")}
-              className={`px-5 w-50 py-2 text-sm font-semibold transition ${
+              className={`px-5 w-full py-2 text-sm font-semibold transition ${
                 mode === "signup"
                   ? "bg-white text-emerald-800 shadow"
                   : "text-slate-500 hover:text-slate-900"
@@ -48,7 +51,9 @@ const AuthPage = () => {
           </div>
         </div>
         {/* Content */}
-        <div></div>
+        <div className="mt-7 flex items-center justify-center">
+              {mode === "login" ? <Login /> : <Signup />}
+        </div>
       </div>
     </div>
   );
