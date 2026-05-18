@@ -3,15 +3,17 @@ import "./App.css";
 import Pantry from "./pages/Pantry";
 import Mainlayout from "./layouts/MainLayout";
 import AuthPage from "./pages/AuthPage/AuthPage";
+import Recipes from "./pages/Recipes";
 
 function App() {
   return (
     <Routes>
-      {/* <Route path="/" element={<Mainlayout />}>
+      <Route path="/" element={<Mainlayout />}>
         <Route index element={<Pantry />} />
-      </Route> */}
+        <Route path="recipes" element={<Recipes />} />
+      </Route>
 
-      <Route path="/" element={<AuthPage />} />
+      <Route path="/" element={<Mainlayout />} />
     </Routes>
   );
 }

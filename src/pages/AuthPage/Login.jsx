@@ -1,6 +1,6 @@
 const Login = () => {
     return (
-            <div className="w-full max-w-md bg-white/50 backdrop-blur-xl shadow-xl rounded-3xl p-8 border border-blue/100">
+            <div className="boxAnimation w-full max-w-md bg-white/50 backdrop-blur-xl shadow-xl rounded-3xl p-8 border border-blue/100">
                 
                 <div className="text-center mb-8">
                     <h1 className="text-4xl font-bold text-[var(--primary-dark)]">
